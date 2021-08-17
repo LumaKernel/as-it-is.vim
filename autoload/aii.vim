@@ -1,27 +1,39 @@
 fu! aii#write(bang, qargs) abort
   let s = &ei
   se ei=all
-  exe 'write' . a:bang . ' ' . a:qargs
-  let &ei = s
+  try
+    exe 'write' . a:bang . ' ' . a:qargs
+  finally
+    let &ei = s
+  endtry
 endf
 
 fu! aii#wall(bang, qargs) abort
   let s = &ei
   se ei=all
-  exe 'wall' . a:bang . ' ' . a:qargs
-  let &ei = s
+  try
+    exe 'wall' . a:bang . ' ' . a:qargs
+  finally
+    let &ei = s
+  endtry
 endf
 
 fu! aii#update(bang, qargs) abort
   let s = &ei
   se ei=all
-  exe 'update' . a:bang . ' ' . a:qargs
-  let &ei = s
+  try
+    exe 'update' . a:bang . ' ' . a:qargs
+  finally
+    let &ei = s
+  endtry
 endf
 
 fu! aii#saveas(bang, qargs) abort
   let s = &ei
   se ei=all
-  exe 'saveas' . a:bang . ' ' . a:qargs
-  let &ei = s
+  try
+    exe 'saveas' . a:bang . ' ' . a:qargs
+  finally
+    let &ei = s
+  endtry
 endf
